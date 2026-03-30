@@ -1,0 +1,12 @@
+package de.tha.prog2.airport.staff;
+
+public class FlightAttendant extends Employee{
+
+	private boolean isLeadAttendant;
+	
+	public FlightAttendant(String lastName, String firstName) {
+		super(lastName, firstName, 3500);
+	}
+	
+	
+}

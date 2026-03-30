@@ -1,0 +1,5 @@
+package de.tha.prog2.airport.staff;
+
+public abstract class Employee {
+	
+}
