@@ -44,27 +44,46 @@ public interface Container {
 	/**
 	 * Removes all elements from the container
 	 */
-	void clear();
+	default void clear() {
+		int size = size();
+		for (int i = 0; i < size; i++) {
+			remove(get(0));
+		}
+	}
 	
-	/**
-	 * Checks if the object is contained in the container. The container 
-	 * uses the equals()-Method to check if the object is in the container.
-	 * 
-	 * @param o Object to search for in the container
-	 * @return true if the object is in the container, false otherwise
-	 */
-	boolean contains(Object o);
+	
+	default boolean contains(Object o) {
+		int size = size();
+		for (int i = 0; i < size; i++) {
+			if (o.equals(get(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	/**
 	 * Converts the container content to an array an returns the array
 	 * @return Array containing all elements in the container
 	 */
-	Object[] toArray();
+	default Object[] toArray() {	
+		int size = size();
+		Object[] array = new Object[size];
+		
+		for (int i = 0; i < size; i++) {
+			array[i] = get(i);
+		}
+		return array;
+	}
 	
 	/**
 	 * Checks if the container contains any elements
 	 * @return true if container is empty, false otherwise
 	 */
-	boolean isEmpty();
-
+	default boolean isEmpty() {
+		if (size() == 0) {
+			return true;
+		}
+		return false;
+	}
 }

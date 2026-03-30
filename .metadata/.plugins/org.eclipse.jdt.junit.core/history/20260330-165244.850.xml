@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="src" project="sheet02" tests="15" started="15" failures="1" errors="8" ignored="0">
+  <testsuite name="de.tha.prog2.test.ListTest" time="0.012" displayname="ListTest" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ListTest]">
+    <testcase name="testGet" classname="de.tha.prog2.test.ListTest" time="0.009" displayname="testGet()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ListTest]/[method:testGet()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	List cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.ListTest.createContainer(ListTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testGet(ContainerBasicTest.java:27)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testRemoveNonExisting" classname="de.tha.prog2.test.ListTest" time="0.001" displayname="testRemoveNonExisting()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ListTest]/[method:testRemoveNonExisting()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	List cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.ListTest.createContainer(ListTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testRemoveNonExisting(ContainerBasicTest.java:56)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testAddAndSize" classname="de.tha.prog2.test.ListTest" time="0.001" displayname="testAddAndSize()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ListTest]/[method:testAddAndSize()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	List cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.ListTest.createContainer(ListTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testAddAndSize(ContainerBasicTest.java:15)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testRemove" classname="de.tha.prog2.test.ListTest" time="0.001" displayname="testRemove()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ListTest]/[method:testRemove()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	List cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.ListTest.createContainer(ListTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testRemove(ContainerBasicTest.java:40)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="de.tha.prog2.test.ContainerInterfaceTest" time="0.004" displayname="ContainerInterfaceTest" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ContainerInterfaceTest]">
+    <testcase name="testToArray" classname="de.tha.prog2.test.ContainerInterfaceTest" time="0.002" displayname="testToArray()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ContainerInterfaceTest]/[method:testToArray()]"/>
+    <testcase name="testClear" classname="de.tha.prog2.test.ContainerInterfaceTest" time="0.0" displayname="testClear()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ContainerInterfaceTest]/[method:testClear()]"/>
+    <testcase name="testContains" classname="de.tha.prog2.test.ContainerInterfaceTest" time="0.001" displayname="testContains()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ContainerInterfaceTest]/[method:testContains()]"/>
+    <testcase name="testIsEmpty" classname="de.tha.prog2.test.ContainerInterfaceTest" time="0.0" displayname="testIsEmpty()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.ContainerInterfaceTest]/[method:testIsEmpty()]"/>
+  </testsuite>
+  <testsuite name="de.tha.prog2.test.AbstractContainerTest" time="0.005" displayname="AbstractContainerTest" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.AbstractContainerTest]">
+    <testcase name="testToString" classname="de.tha.prog2.test.AbstractContainerTest" time="0.004" displayname="testToString()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.AbstractContainerTest]/[method:testToString()]">
+      <failure>
+        <expected>true</expected>
+        <actual>false</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)&#13;
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)&#13;
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)&#13;
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)&#13;
+	at de.tha.prog2.test.AbstractContainerTest.testToString(AbstractContainerTest.java:78)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+    <testcase name="testEquals" classname="de.tha.prog2.test.AbstractContainerTest" time="0.001" displayname="testEquals()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.AbstractContainerTest]/[method:testEquals()]"/>
+    <testcase name="testNotEquals" classname="de.tha.prog2.test.AbstractContainerTest" time="0.0" displayname="testNotEquals()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.AbstractContainerTest]/[method:testNotEquals()]"/>
+  </testsuite>
+  <testsuite name="de.tha.prog2.test.VectorTest" time="0.003" displayname="VectorTest" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.VectorTest]">
+    <testcase name="testGet" classname="de.tha.prog2.test.VectorTest" time="0.001" displayname="testGet()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.VectorTest]/[method:testGet()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Vector cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.VectorTest.createContainer(VectorTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testGet(ContainerBasicTest.java:27)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testRemoveNonExisting" classname="de.tha.prog2.test.VectorTest" time="0.0" displayname="testRemoveNonExisting()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.VectorTest]/[method:testRemoveNonExisting()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Vector cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.VectorTest.createContainer(VectorTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testRemoveNonExisting(ContainerBasicTest.java:56)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testAddAndSize" classname="de.tha.prog2.test.VectorTest" time="0.0" displayname="testAddAndSize()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.VectorTest]/[method:testAddAndSize()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Vector cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.VectorTest.createContainer(VectorTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testAddAndSize(ContainerBasicTest.java:15)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testRemove" classname="de.tha.prog2.test.VectorTest" time="0.001" displayname="testRemove()" uniqueid="[engine:junit-jupiter]/[class:de.tha.prog2.test.VectorTest]/[method:testRemove()]">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Vector cannot be resolved to a type
+&#13;
+	at de.tha.prog2.test.VectorTest.createContainer(VectorTest.java:10)&#13;
+	at de.tha.prog2.test.ContainerBasicTest.testRemove(ContainerBasicTest.java:40)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

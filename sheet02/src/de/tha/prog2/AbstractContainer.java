@@ -1,0 +1,39 @@
+package de.tha.prog2;
+
+public abstract class AbstractContainer implements Container {
+
+	public boolean equals(Object o) 
+	{
+		if (o instanceof AbstractContainer) 
+		{
+			AbstractContainer other = (AbstractContainer) o;
+			int size = size();
+			
+			if (size != other.size()) 
+			{
+				return false;
+			}
+			
+			for (int i = 0; i < size; i++) 
+			{
+				if (!get(i).equals(other.get(i))) 
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
+	public String toString() 
+	{
+		String result = "";
+		int size = size();
+		for (int i = 0; i < size; i++) 
+		{
+			result += get(i).toString() + "\n";
+		}
+		
+		return result;
+	}
+}
