@@ -11,7 +11,7 @@ public class DoubleLinkedListTest {
 
     @BeforeEach
     void setup() throws Exception {
-        boolean myContainerTestExists = classExists("de.tha.prog2.MyContainerTest");
+        boolean myContainerTestExists = classExists("de.tha.prog2.container.MyContainerTest");
         assertTrue(myContainerTestExists, "Schreiben zunächst eigene Test in MyContainerTest.");
 
         list = new DoubleLinkedList();

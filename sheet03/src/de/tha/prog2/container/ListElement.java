@@ -2,7 +2,7 @@ package de.tha.prog2.container;
 
 public class ListElement {
 	
-	public ListElement (Object content, Object next, Object prev){
+	public ListElement (Object content, ListElement next, ListElement prev){
 		this.content = content;
 		this.next = next;
 		this.prev = prev;
@@ -10,6 +10,6 @@ public class ListElement {
 	
 	public Object content;
 	
-	public Object next;
-	public Object prev;
+	public ListElement next;
+	public ListElement prev;
 }
