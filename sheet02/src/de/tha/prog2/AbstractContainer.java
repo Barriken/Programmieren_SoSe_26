@@ -22,6 +22,10 @@ public abstract class AbstractContainer implements Container {
 				}
 			}
 		}
+		else 
+		{
+			return false;
+		}
 		return true;
 	}
 	
