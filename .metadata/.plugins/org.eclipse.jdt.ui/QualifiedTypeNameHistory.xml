@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="de.tha.prog2.Container"/>
     <fullyQualifiedTypeName name="de.tha.prog2.AbstractContainer"/>
+    <fullyQualifiedTypeName name="de.tha.prog2.container.DoubleLinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>

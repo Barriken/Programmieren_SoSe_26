@@ -59,9 +59,20 @@ public class DoubleLinkedList extends AbstractContainer {
 		while(currentElement != null) {
 			
 			if (currentElement.content.equals(o)) {
-				//remove logic
-				currentElement.prev.next = currentElement.next;
-				currentElement.next.prev = currentElement.prev;
+				
+				if (!head.equals(currentElement) && !tail.equals(currentElement)) {
+					currentElement.prev.next = currentElement.next;
+					currentElement.next.prev = currentElement.prev;
+					return true;
+				}
+				if (head.equals(currentElement)) {
+					head = currentElement.next;
+					head.prev = null;
+				}
+				if (tail.equals(currentElement)){
+					tail = currentElement.prev;
+					tail.next = null;
+				}
 				return true;
 			}
 			else {
