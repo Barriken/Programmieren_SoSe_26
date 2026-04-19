@@ -27,33 +27,75 @@ public class ZooHabitatTest {
     }
 
     static class TestHerbivore implements Herbivore {
-        @Override
-        public void eatPlant() {}
-
-        @Override
-        public int weight() { return 0; }
+       
+        
 
         @Override
         public String toString() {
             return "Ein Pflanzenfresser";
         }
+
+		@Override
+		public boolean isHungry() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean isAlive() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void eatPlant() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public int weight() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
     }
 
     static class TestCarnivore implements Carnivore {
-        @Override
-        public void eatMeat() {}
-
-        @Override
-        public int weight() { return 0; }
-
+  
+       
         @Override
         public String toString() {
             return "Ein Fleischfresser";
         }
+
+		@Override
+		public int weight() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public boolean isHungry() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean isAlive() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+		@Override
+		public void eatMeat() {
+			// TODO Auto-generated method stub
+			
+		}
     }
 
     @Test
-    void testZooHabitatSize() throws HabitatFullException {
+    void testZooHabitatSize() throws HabitatFullException, InvalidAnimalException {
         ZooHabitat habitat = new ZooHabitat(10);
         habitat.addAnimal(new TestCarnivore());
         habitat.addAnimal(new TestCarnivore());
@@ -78,7 +120,7 @@ public class ZooHabitatTest {
     }
 
     @Test
-    void testInvalidAnimalExceptionThrown() throws HabitatFullException {
+    void testInvalidAnimalExceptionThrown() throws HabitatFullException, InvalidAnimalException {
         ZooHabitat habitat = new ZooHabitat(3);
         habitat.addAnimal(new TestCarnivore());
 
@@ -98,4 +140,4 @@ public class ZooHabitatTest {
         assertThrows(HabitatFullException.class,
                 () -> habitat.addAnimal(new TestCarnivore()));
     }
-}s
+}
