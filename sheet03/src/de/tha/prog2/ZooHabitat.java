@@ -60,9 +60,11 @@ public class ZooHabitat {
 			
 			
 			
-				if (animals.head.content instanceof Herbivore && animal instanceof Herbivore ||
+				if (
+						animals.head.content instanceof Herbivore && animal instanceof Herbivore ||
 						animals.head.content instanceof Carnivore && animal instanceof Carnivore ||
-						animals.head.content instanceof Omnivore && animal instanceof Omnivore) {
+						animals.head.content instanceof Omnivore && animal instanceof Omnivore) 
+				{
 					animals.add(animal);
 					return;
 				}
