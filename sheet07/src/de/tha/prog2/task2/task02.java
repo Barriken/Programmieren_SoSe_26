@@ -90,9 +90,11 @@ public class task02 {
 		}
 		ArrayList<VereinsDaten> result = new ArrayList<>(tabelle.values());
 		
-		result.sort(Comparator.comparingInt((VereinsDaten v) -> v.points).reversed()
-				.thenComparingInt((VereinsDaten v) -> v.goalDiff).reversed()
-				.thenComparingInt((VereinsDaten v) -> v.shotGoals).reversed());
+		result.sort(
+			    Comparator.comparingInt((VereinsDaten v) -> v.points).reversed()
+			        .thenComparing(Comparator.comparingInt((VereinsDaten v) -> v.goalDiff).reversed())
+			        .thenComparing(Comparator.comparingInt((VereinsDaten v) -> v.shotGoals).reversed())
+			);
 		
 		return result;
 	}
