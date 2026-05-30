@@ -1,18 +1,33 @@
 package de.tha.prog2.task2;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import de.tha.prog2.tools.GameDataProvider;
 
 public class task02 {
-	public static void main (String [] args) {
+	public static void main (String [] args) throws IOException {
+		Scanner scanner = new Scanner(System.in);
+		GameDataProvider data = new GameDataProvider();
 		
+		ArrayList<VereinsDaten> tabelle = new ArrayList<>(auswerten(data, scanner.nextInt()));
+		
+		
+		int counter = 1;
+		for (VereinsDaten daten : tabelle) {
+			System.out.format("%4d %40s %4d %4d %4d %4d %3d:%3d %4d %4d", counter, daten.name, daten.playedGames, daten.wins, daten.draws, daten.losses, daten.shotGoals, daten.receivedGoals, daten.goalDiff, daten.points );
+			System.out.println();
+			counter++;
+		}
 	}
 	
-	public Collection<VereinsDaten> auswerten (GameDataProvider data, int days) {
+	public static Collection<VereinsDaten> auswerten (GameDataProvider data, int days) {
 		int currentDay = 1;
 		HashMap<String, VereinsDaten> tabelle = new HashMap<String, VereinsDaten>();
 		
@@ -33,7 +48,7 @@ public class task02 {
 				}	
 				if (tabelle.containsKey(game.homeTeam)) 
 				{
-					home = tabelle.get(game.awayTeam);
+					home = tabelle.get(game.homeTeam);
 				}
 				
 				away.playedGames += 1;
@@ -42,8 +57,8 @@ public class task02 {
 				away.shotGoals += game.awayGoals;
 				home.shotGoals += game.homeGoals;
 				
-				away.receivedGoals += game.awayGoals;
-				home.receivedGoals += game.homeGoals;
+				away.receivedGoals += game.homeGoals;
+				home.receivedGoals += game.awayGoals;
 				
 				away.goalDiff = (away.shotGoals - away.receivedGoals);
 				home.goalDiff = (home.shotGoals - home.receivedGoals);
@@ -69,8 +84,16 @@ public class task02 {
 				}
 				tabelle.put(home.name, home);
 				tabelle.put(away.name, away);
+				
 			}
+			currentDay++;
 		}
-		return tabelle.values();
+		ArrayList<VereinsDaten> result = new ArrayList<>(tabelle.values());
+		
+		result.sort(Comparator.comparingInt((VereinsDaten v) -> v.points).reversed()
+				.thenComparingInt((VereinsDaten v) -> v.goalDiff).reversed()
+				.thenComparingInt((VereinsDaten v) -> v.shotGoals).reversed());
+		
+		return result;
 	}
 }

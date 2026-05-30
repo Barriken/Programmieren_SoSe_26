@@ -1,0 +1,20 @@
+Das zweisemestrige Orientierungsstudium vermittelt Grundlagenwissen 
+in Wirtschaftsinformatik, Informatik und Betriebswirtschaft. 
+Die Studierenden erlangen dabei Kenntnisse zu Rechnergrundlagen, 
+Informationssystemen, Softwareentwicklung, der Analyse von Datenstrukturen und Buchführung.
+
+Ab dem dritten Semester beginnt die Vertiefungsphase in den drei Fachbereichen. 
+Auf dem Studienplan stehen jetzt das Einrichten betrieblicher Informationssysteme, 
+Datenbanken und Software-Engineering. Das betriebswirtschaftliche Fachwissen 
+wird durch Kenntnisse aus den Bereichen Kosten- und Leistungsrechnung und Marketing erweitert. 
+Ergänzend werden Kenntnisse zum Management von IT und rechtliche Grundlagen vermittelt.
+
+Im vierten Semester steht, neben der weiteren Vertiefung, die Anwendung des Gelernten im ersten IT-Projekt an,
+das die Studierenden als Gruppenarbeit im In- oder Ausland durchführen. 
+Darüber hinaus erhalten die Studierenden hier erste Freiheitsgrade durch Wahl eine fachwissenschaftlichen Wahlpflichtfaches.
+
+Auch das fünfte Semester ist praxisorientiert.
+Im Rahmen von größeren IT-Projekten in Unternehmen haben die Studierenden die Chance, 
+ihr erworbenes Know-how selbstständig in die Praxis umzusetzen. 
+Ergänzt wird diese Praxisphase durch begleitende Veranstaltungen, 
+die auch den Kontakt zur Hochschule gewährleisten.
