@@ -3,6 +3,7 @@ package de.tha.prog2.task1;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
+import de.tha.prog2.container.DoubleLinkedList;
 
 public abstract class AbstractSet<T>  {
 	

@@ -1,5 +1,7 @@
 package de.tha.prog2.container;
 
+import de.tha.prog2.task1.ListElement;
+
 public class DoubleLinkedList extends AbstractContainer {
 
 	public ListElement head;
@@ -53,6 +55,22 @@ public class DoubleLinkedList extends AbstractContainer {
 		return size;
 	}
 	
+	public<T> boolean insert(T o, int index) {
+		int currentIndex = 0;
+		ListElement currentElement = head;
+		do {
+			if (currentIndex == index) {
+				ListElement hilfsV = currentElement;
+				currentElement = new ListElement(o, hilfsV, hilfsV.prev);
+				currentElement.next.prev = currentElement;
+				return true;
+			}
+			currentElement = currentElement.next;
+			currentIndex++;
+		} while (currentIndex != index);
+		return false;
+	}
+	
 	public boolean remove(Object o) {
 		ListElement currentElement = head;
 		
@@ -81,5 +99,6 @@ public class DoubleLinkedList extends AbstractContainer {
 		}
 		return false;
 	}
+
 
 }

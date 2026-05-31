@@ -1,4 +1,4 @@
-package de.tha.prog2.task1;
+package de.tha.prog2.task2;
 
 import java.util.Random;
 

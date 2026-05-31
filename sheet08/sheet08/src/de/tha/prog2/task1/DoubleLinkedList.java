@@ -21,7 +21,7 @@ public class DoubleLinkedList extends AbstractContainer {
 		return true;
 	}
 
-	public boolean insert(Object o, int index) {
+	public<T> boolean insert(T o, int index) {
 		int currentIndex = 0;
 		ListElement currentElement = head;
 		do {
