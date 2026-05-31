@@ -4,11 +4,15 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+import de.tha.prog2.task3.Word.Position;
+
 public class WordCounter {
 
     // Reader zum Einlesen der Zeichenquelle
     private Reader reader;
 
+    private HashMap<Word, Integer> wordMap = new HashMap<Word, Integer>();
+    
     // Konstruktor speichert den uebergebenen Reader
     public WordCounter(Reader reader) {
         this.reader = reader;
@@ -23,8 +27,48 @@ public class WordCounter {
         String line = br.readLine();
 
         // Solange noch Zeilen vorhanden sind
-        while (line != null) {
-
+        while (line != null) 
+        {
+        	var allWords = line.split(" ");
+        	int currentWord = 1;
+        	int wordCounter = allWords.length;
+        	
+        	for (String w : allWords) 
+        	{
+        		if (wordCounter == 1) 
+        		{
+        			Word[] ws =  {new Word(w.toLowerCase(), Position.START), 
+        					new Word(w.toLowerCase(), Position.END), 
+        					new Word(w.toLowerCase(), Position.MIDDLE) };
+        			
+        			for (Word w2 : ws) {
+        				if (wordMap.containsKey(w2)) {
+        					wordMap.put(w2, wordMap.get(w2) + 1);
+        				}
+        				else {
+        					wordMap.put(w2, 1);
+        				}
+        			}
+        		}
+        		else {
+        			Word cw = new Word(w.toLowerCase(), Position.MIDDLE);
+        			if (currentWord == 1) {
+        				 cw = new Word(w.toLowerCase(), Position.START);
+        				
+        			}
+        			else if (currentWord == wordCounter) {
+        				 cw = new Word(w.toLowerCase(), Position.END);
+        			}
+        			if (wordMap.containsKey(cw)) {
+    					wordMap.put(cw, wordMap.get(cw) + 1);
+    				}
+    				else {
+    					wordMap.put(cw, 1);
+    				}
+        			
+        		}
+        		currentWord++;
+        	}
             // TODO:
             // - Zeile in Woerter zerlegen
             // - Position der Woerter bestimmen
@@ -36,6 +80,10 @@ public class WordCounter {
             // Naechste Zeile einlesen
             line = br.readLine();
         }
+    }
+    
+    public Map<Word, Integer> getWordMap(){
+    	return wordMap;
     }
 
     public static void main(String[] args) throws IOException {
